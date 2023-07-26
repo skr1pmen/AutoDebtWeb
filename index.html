@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Layout</title>
+</head>
+<body>
+    <div class="navigation">
+        <a href="./" class="logo"><img src="./assets/image/logo.svg" alt="logo">AutoDebt</a>
+        <a href="#" class="links"><span class="material-symbols-outlined">home</span>Главная страница</a>
+        <a href="#" class="links"><span class="material-symbols-outlined">table_chart</span>Таблицы</a>
+        <a href="#" class="links"><span class="material-symbols-outlined">shield_person</span>Админка</a>
+        <hr>
+        <a href="#" class="links"><span class="material-symbols-outlined">settings</span>Настройки</a>
+    </div>
+    <div class="header">
+        <div class="system_time">Вы в системе: <span id="time">0:15:35</span></div>
+        <a href="#" class="user">nuckname<span class="material-symbols-outlined">expand_more</span></a>
+    </div>
+    <div class="content">
+        <input type="checkbox" class="view_cb">
+        <div class="title">Заявки</div>
+        <table>
+            <thead>
+            <tr>
+                <td class="title_table">№</td>
+                <td class="title_table">ФИО</td>
+                <td class="title_table">Статус</td>
+                <td class="title_table">№ ИП</td>
+                <td class="title_table">Дата ИП</td>
+                <td class="title_table">Сумма долга</td>
+                <td class="title_table">Подробнее</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Новая заявка</td>
+                <td>32456</td>
+                <td>24.04.2023</td>
+                <td>345678</td>
+                <td><span class="btn_view">Смотреть</span></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Новая заявка</td>
+                <td>32456</td>
+                <td>24.04.2023</td>
+                <td>345678</td>
+                <td><span class="btn_view">Смотреть</span></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Новая заявка</td>
+                <td>32456</td>
+                <td>24.04.2023</td>
+                <td>345678</td>
+                <td><span class="btn_view">Смотреть</span></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Новая заявка</td>
+                <td>32456</td>
+                <td>24.04.2023</td>
+                <td>345678</td>
+                <td><span class="btn_view">Смотреть</span></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Новая заявка</td>
+                <td>32456</td>
+                <td>24.04.2023</td>
+                <td>345678</td>
+                <td><span class="btn_view">Смотреть</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="info_window">
+            <div class="title">Данные о заявке</div>
+            <div class="line"><span class="subtitle">ФИО: </span>Инванов Иван Иванович</div>
+            <div class="line"><span class="subtitle">№ Исполнительного листа: </span>78956</div>
+            <div class="line"><span class="subtitle">Статус: </span>Новая заявка</div>
+            <div class="line"><span class="subtitle">Данные пристава: </span>Иванов2 Иван2 Иванович2, Его должность, Контактные данные</div>
+            <div class="line"><span class="subtitle">Регион: </span>Астраханская область</div>
+            <div class="line"><span class="subtitle">Статус розыска: </span>Статус</div>
+            <div class="line"><span class="subtitle">Счётчик дней: </span>6</div>
+            <div class="line"><span class="subtitle">Комментарии: </span>История всех комментариев</div>
+            <span class="btn_view close">Закрыть</span>
+        </div>
+    </div>
+    <script>
+        let text = document.querySelectorAll('.btn_view');
+        let checkbox = document.querySelector('.view_cb');
+        text.forEach(function(item){
+            item.addEventListener('click', () =>{
+                checkbox.checked = !checkbox.checked;
+            })
+        });
+    </script>
+</body>
+</html>
